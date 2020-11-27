@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:none;stroke:#495057;stroke-linecap:round;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="prefix__layout" transform="translate(-2.322 -2.322)">
+        <rect id="prefix__Rectangle_121" width="12" height="12" class="prefix__cls-1" data-name="Rectangle 121" rx="2" transform="translate(2.822 2.822)"/>
+        <path id="prefix__Line_61" d="M0 0L12 0" class="prefix__cls-1" data-name="Line 61" transform="translate(2.822 6.822)"/>
+        <path id="prefix__Line_62" d="M0 8L0 0" class="prefix__cls-1" data-name="Line 62" transform="translate(6.822 6.822)"/>
+    </g>
+</svg>

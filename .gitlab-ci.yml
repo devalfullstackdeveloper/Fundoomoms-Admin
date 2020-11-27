@@ -1,0 +1,17 @@
+stages:
+  - deploy
+
+deploy_staging:
+  stage: deploy
+  script:
+    - find /var/www/html/tTr7mMiA/0/aarnaprojects/FundooMomsAdmin -type d -exec chmod 755 {} \;
+    - find /var/www/html/tTr7mMiA/0/aarnaprojects/FundooMomsAdmin -type f -exec chmod 644 {} \;
+    - cp -rv /home/ubuntu/Fundoomoms/config.php /var/www/html/tTr7mMiA/0/aarnaprojects/FundooMomsAdmin/application/config/
+    - cp -rv /home/ubuntu/Fundoomoms/database.php /var/www/html/tTr7mMiA/0/aarnaprojects/FundooMomsAdmin/application/config/
+    - chmod -R 777 /var/www/html/tTr7mMiA/0/aarnaprojects/FundooMomsAdmin/uploads
+    - echo "Deploy to development server - https://dev.aarnaapps.com/FundooMomsAdmin"
+  environment:
+    name: staging
+    url: https://dev.aarnaapps.com/FundooMomsAdmin
+  only:
+    - master

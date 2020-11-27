@@ -1,0 +1,25 @@
+.form-control:disabled, .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #f7f7f6;
+    opacity: 1;font-weight: bold;
+    color: #232323;
+}
+.form-control-label{color: #232323;font-weight: bold;}
+.table-bordered th, .table-bordered td, .table-bordered th, .table-bordered td{border-color: #d6d6d6!important;color: #000}
+.form-control{color: #000; border-color: #000}
+a{color: #1074e6;}
+.pt-0{padding-top: 0}
+.pb-0{padding-bottom: 0}
+
+
+.btnActivitySelected{
+    background: #f68b1f !important;
+    color:white;
+}
+
+.ui-front {
+    z-index: 9999 !important;
+}
+.pro_name{padding: 18px 0; display: block;}
+.radio, .checkbox{padding-left: 20px;padding-top: 10px;}
+.taglist{padding-left: 20px}
+
