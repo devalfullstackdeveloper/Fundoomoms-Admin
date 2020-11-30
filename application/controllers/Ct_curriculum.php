@@ -848,7 +848,7 @@ class Ct_curriculum extends CI_Controller {
             $Ctype = $this->input->post('uploadType');
             $config['upload_path']          = './uploads/photos/';
             $config['allowed_types']        = 'gif|jpg|png|jpeg|mp4|pdf|doc|docx|ppt';
-            $config['file_name']            = $_FILES['PhotoFile']['name'];
+            $config['file_name']            = str_replace(" ","_",$_FILES['PhotoFile']['name']);
             if($Ctype=="2"){
                 $config['max_size']             = 6144;
             }else{
