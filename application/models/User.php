@@ -570,8 +570,8 @@ class User extends CI_Model {
          $query .=" WHERE (u.status='0' or u.status='1') and u.name!='Admin'";
 
          if($month!='all'){
-            $start = date("Y-m-d",strtotime($start));
-            $end = date("Y-m-d",strtotime($end));
+            $start = date("Y-m-d",strtotime($start))." 00:00:00";
+            $end = date("Y-m-d",strtotime($end))." 23:59:59";
             $query .=" and u.added_on BETWEEN '".$start."' and '".$end."'";
          }
 
@@ -601,7 +601,6 @@ class User extends CI_Model {
          // }
 
          $query .=" order by id desc";
-
          // die($query);
 
          $exe = $this->db->query($query);
