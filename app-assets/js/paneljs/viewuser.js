@@ -1,5 +1,6 @@
 var baseURL = $("#base_url").val(); 
-const start = moment().startOf('month');
+// const start = moment().startOf('month');
+const start = moment().month(0).date(1).year('2020').hours(0).minutes(0).seconds(0).milliseconds(0);
 const end   = moment().endOf('month');
 
 function loadData1(start,end,cClass,access,status){

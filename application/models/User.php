@@ -569,7 +569,13 @@ class User extends CI_Model {
          $query = "SELECT u.* FROM user_register as u join payment_details as p on p.user_id=u.id";
          $query .=" WHERE (u.status='0' or u.status='1') and u.name!='Admin'";
 
-         if($month!='all'){
+         if(isset($month) && $month!='all'){
+            $start = date("Y-m-d",strtotime($start))." 00:00:00";
+            $end = date("Y-m-d",strtotime($end))." 23:59:59";
+            $query .=" and u.added_on BETWEEN '".$start."' and '".$end."'";
+         }
+
+         if($start != "" && $end != ""){
             $start = date("Y-m-d",strtotime($start))." 00:00:00";
             $end = date("Y-m-d",strtotime($end))." 23:59:59";
             $query .=" and u.added_on BETWEEN '".$start."' and '".$end."'";
@@ -862,7 +868,7 @@ class User extends CI_Model {
 
     public function updateUserIsView(){
         $update = $this->db->update($this->userTbl,array('is_view'=>'1'),array('is_view'=>'0'));
-        return $update ? $user_id : false ;
+        return $update ? $update : false ;
     }
 
     public function countNewUser(){

@@ -1,9 +1,11 @@
 var baseURL = $("#base_url").val(); 
-const start = moment().startOf('month');
+// const start = moment().startOf('month');
+const start = moment().month(0).date(1).year('2020').hours(0).minutes(0).seconds(0).milliseconds(0);
 const end   = moment().endOf('month');
 
-
+console.log(start)
 function loadData1(start,end,sclass,sch){
+  console.log(start);
   $.post(baseURL+'Ct_dashboard/load_dashboard_request',{start:start,end:end,fclass:sclass,fstatus:sch},function(data){
       $(".LoadList").html(data);
       // $("#menu_3").text('Call Request');

@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+// error_reporting(0);
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Ct_dashboard extends CI_Controller {
@@ -239,7 +239,7 @@ class Ct_dashboard extends CI_Controller {
         $data['classList'] = $this->tb_class->getAllRecords();
         $data['start'] = $_POST['start'];
         $data['end'] = $_POST['end'];
-        $data['fmonth'] = $_POST['month'];
+        // $data['fmonth'] = $_POST['month'];
         $data['cClass'] = $_POST['class'];
         $data['access'] = $_POST['access'];
         $data['status'] = $_POST['status'];
