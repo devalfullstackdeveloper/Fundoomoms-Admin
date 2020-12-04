@@ -127,7 +127,7 @@ $currentMonth = date("m");
     var baseURL = $("#base_url").val();
     $("#overlay").fadeIn(300);
 
-    loadData1('<?= date("Y-m-01") ?>','<?= date("Y-m-t") ?>','all','all','all');
+    loadData1('<?= date("2020-01-01") ?>','<?= date("Y-m-t") ?>','all','all','all');
 
     // function loadData(start,end,cClass,access,status){
     //     // alert(start+' '+end+' '+cClass+' '+access+' '+status);
